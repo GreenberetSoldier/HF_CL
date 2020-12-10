@@ -124,7 +124,7 @@ static void test_gateOpen_3(void){
     enum state ret;
 
     UCUNIT_TestcaseBegin("test_gateOpen_2");
-    UCUNIT_WriteString("Checking gateOpen() for currentState == closing\n");
+    UCUNIT_WriteString("Checking gateOpen() for currentState == opening\n");
     ret = gateOpen();
     UCUNIT_ChecklistBegin(UCUNIT_ACTION_WARNING);
     UCUNIT_CheckIsEqual(currentState, opening);
@@ -139,7 +139,7 @@ static void test_gateOpen_4(void){
     enum state ret;
 
     UCUNIT_TestcaseBegin("test_gateOpen_2");
-    UCUNIT_WriteString("Checking gateOpen() for currentState == closing\n");
+    UCUNIT_WriteString("Checking gateOpen() for currentState == stuck\n");
     ret = gateOpen();
     UCUNIT_ChecklistBegin(UCUNIT_ACTION_WARNING);
     UCUNIT_CheckIsEqual(currentState, stuck);

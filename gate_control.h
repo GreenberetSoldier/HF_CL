@@ -56,7 +56,7 @@ int gateCheckFinish(void);
 enum state gateGetState(void);
 
 /*
- * Set gate state externally - Please use with caution!
+ * Attempt to get gate out of stuck state
  * */
 void gateResolveStuck(void);
 

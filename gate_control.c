@@ -134,7 +134,7 @@ int gateCheckFinish(void){
                 return IN_PROGRESS;
         
         case stuck:
-                return STUCK;
+            return STUCK;
             
         default:
             // unforeseen state, unknown error        
@@ -148,7 +148,7 @@ enum state gateGetState(void){
 
 void gateResolveStuck(void){
     // for resolving stuck state we currently try to close
-    // if this doesn't help, state will become stuck again after MAX_CLOSING_TIME
+    // if this doesn't help, state should become stuck again after MAX_CLOSING_TIME
 
     set_gpio(pin_act_open, 0);
     set_gpio(pin_act_close, 0);
